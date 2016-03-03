@@ -1,0 +1,17 @@
+finders:
+  - graphite_influxdb.InfluxdbFinder
+influxdb:
+   db:   graphite
+logging:
+  version: 1
+  disable_existing_loggers: true
+  handlers:
+    file:
+      class: logging.FileHandler
+      filename: /var/log/graphite-api.log
+  loggers:
+    graphite_api:
+      handlers:
+        - file
+      propagate: true
+      level: INFO
