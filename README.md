@@ -1,1 +1,1 @@
-# docker-grafana-graphite-influxdb
+# graphite-api
