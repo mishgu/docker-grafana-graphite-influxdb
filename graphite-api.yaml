@@ -2,6 +2,7 @@ finders:
   - graphite_influxdb.InfluxdbFinder
 influxdb:
    db:   graphite
+   host: 172.17.0.2
 logging:
   version: 1
   disable_existing_loggers: true
