@@ -15,5 +15,8 @@ If you don't have dokcer you need [Install Docker](https://docs.docker.com/engin
     cd27bf330f15        msha/influxdb       "/run.sh"                46 minutes ago      Up 46 minutes       0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
 Create 'graphite' database in influxdb:
 ![alt text](https://pp.vk.me/c630219/v630219008/27d74/TIeO3GbwMCI.jpg)
+Review you database:
+![alt text](https://pp.vk.me/c630219/v630219008/27d7e/q4kwFST4h5k.jpg)
+
 
 ### **Install graphite image :**
