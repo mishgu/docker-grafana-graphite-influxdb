@@ -36,7 +36,7 @@ If you don't connect to *http://localhost:8083/* you need to check:
     238f07d20a1b        msha/influxdb       "/run.sh"                7 minutes ago       Up 7 minutes        0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
 The `-it` instructs Docker to allocate a pseudo-TTY connected to the container’s stdin, `--link` - add link to another container
 
-#Check connectivity container:
+##Check connectivity container:
 
     $ docker exec graphite cat /etc/hosts
     127.0.0.1	localhost
