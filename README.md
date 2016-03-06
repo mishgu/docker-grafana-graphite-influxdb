@@ -17,6 +17,10 @@ Create 'graphite' database in influxdb:
 ![alt text](https://pp.vk.me/c630219/v630219008/27d74/TIeO3GbwMCI.jpg)
 Review you database:
 ![alt text](https://pp.vk.me/c630219/v630219008/27d7e/q4kwFST4h5k.jpg)
+If you don't connect to *http://localhost:8083/* you need to check:
 
-
+    $ docker ps
+    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+    cd27bf330f15        msha/influxdb       "/run.sh"                46 minutes ago      Up 46 minutes       0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
+    
 ### **Install graphite image :**
