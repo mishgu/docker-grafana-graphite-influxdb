@@ -37,7 +37,7 @@ You can see influxdb on *http://localhost:8083/* if you don't connect to *http:/
 * `-it`: instructs Docker to allocate a pseudo-TTY connected to the container’s stdin
 * `--link`: add link to another container
 
-##Check connectivity container:
+## Check connectivity container:
 
     $ docker exec graphite cat /etc/hosts
     127.0.0.1	localhost
