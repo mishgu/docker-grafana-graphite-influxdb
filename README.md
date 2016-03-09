@@ -8,7 +8,7 @@ If you don't have dokcer you need [Install Docker](https://docs.docker.com/engin
 # Usage
 ### **Install influxdb image :**
 
-    $ docker pull msha/influxdb
+    $ docker pull msha/influxdb:0.9
     $ docker run -d -p 8083:8083 -p 8086:8086 --name influxdb -e PRE_CREATE_DB="graphite" msha/influxdb:0.9
     $ docker ps
     CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                            NAMES
