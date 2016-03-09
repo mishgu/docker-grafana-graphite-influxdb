@@ -11,8 +11,8 @@ If you don't have dokcer you need [Install Docker](https://docs.docker.com/engin
     $ docker pull msha/influxdb
     $ docker run -d -p 8083:8083 -p 8086:8086 --name influxdb -e PRE_CREATE_DB="graphite" msha/influxdb:0.9
     $ docker ps
-    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-    cd27bf330f15        msha/influxdb:0.9       "/run.sh"                46 minutes ago      Up 46 minutes       0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
+    CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                            NAMES
+    ee78b4de5745        msha/influxdb:0.9   "/run.sh"                2 minutes ago        Up 2 minutes        0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
     
 * `-d`: your container will run in “detached” mode, in the background
 * `-p`: you assign self port for port container
@@ -23,17 +23,17 @@ If you don't have dokcer you need [Install Docker](https://docs.docker.com/engin
 You can see influxdb on *http://localhost:8083/* if you don't connect to *http://localhost:8083/* you need to check:
 
     $ docker ps
-    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-    cd27bf330f15        msha/influxdb:0.9       "/run.sh"                46 minutes ago      Up 46 minutes       0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
+    CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                            NAMES
+    ee78b4de5745        msha/influxdb:0.9   "/run.sh"                2 minutes ago        Up 2 minutes        0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
     
 ### **Install graphite image :**
 
     $ docker pull msha/graphite-api
     $ docker run -it --link influxdb:msha/influxdb -d -p 8081:8000 --name graphite msha/graphite-api
     $ docker ps
-    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-    5096e5312238        msha/graphite-api   "/bin/sh -c 'gunicorn"   41 seconds ago      Up 39 seconds       0.0.0.0:8081->8000/tcp                           graphite
-    238f07d20a1b        msha/influxdb:0.9       "/run.sh"                7 minutes ago       Up 7 minutes        0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
+    CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                            NAMES
+    7508c96b4f1c        msha/graphite-api   "/bin/sh -c 'gunicorn"   About a minute ago   Up About a minute   0.0.0.0:8081->8000/tcp                           graphite
+    ee78b4de5745        msha/influxdb:0.9   "/run.sh"                2 minutes ago        Up 2 minutes        0.0.0.0:8083->8083/tcp, 0.0.0.0:8086->8086/tcp   influxdb
 * `-it`: instructs Docker to allocate a pseudo-TTY connected to the container’s stdin
 * `--link`: add link to another container
 
